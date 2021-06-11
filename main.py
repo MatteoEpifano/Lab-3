@@ -34,3 +34,13 @@ def sort(num):
   secondlist = []
 
 #Function 2
+
+p, z = split(x)
+z = [int(i) for i in z]
+
+def two(z):
+  last = []
+  patty = []
+  patty = sorted(z[1::2], rev = true)
+  del z[1::2]
+  last = [None] * 
