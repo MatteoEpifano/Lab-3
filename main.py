@@ -58,7 +58,7 @@ def two(z):
 
   #set last list = to none function multiplied by the len(z) + len(patty) to complete list polishing
   last = [None] * (len(z) + len(patty))
-  
+
   #last list [::2] set equalto z
   last[::2] = z
 
@@ -68,6 +68,9 @@ def two(z):
 
   #return the 'last' list
   return last
+
+#Print the modified list
+print("These are your numbers with every second placed in decending order: ")
 
 #Print the modified list
 print(two(x))
