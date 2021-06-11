@@ -41,6 +41,11 @@ z = [int(i) for i in z]
 def two(z):
   last = []
   patty = []
-  patty = sorted(z[1::2], rev = true)
+  patty = sorted(z[1::2], reverse = True)
   del z[1::2]
-  last = [None] * 
+  last = [None] * (len(z) + len(patty))
+  last[::2] = z
+  last[1::2] = patty
+  return last
+
+print(two(x))
