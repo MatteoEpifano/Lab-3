@@ -35,17 +35,39 @@ def sort(num):
 
 #Function 2
 
+#set p, z = to the split(x)
 p, z = split(x)
+
+#set z = to the int(1) for i in z 
 z = [int(i) for i in z]
 
+
+#define two function to represent the second list of numbers that will have each second number in order of decreasing value
 def two(z):
+
+  #Create a list called Last to represent last 
   last = []
+  #create new list called patty that will be the final
   patty = []
+
+
+  #Set patty = to sorted and swap z using 1::2 function, while setting reverse equal to true along with it. With this we can order the second numbers from greatest to least 
   patty = sorted(z[1::2], reverse = True)
+  #use del function z [1::2] with [1::2] function 
   del z[1::2]
+
+  #set last list = to none function multiplied by the len(z) + len(patty) to complete list polishing
   last = [None] * (len(z) + len(patty))
+  
+  #last list [::2] set equalto z
   last[::2] = z
+
+
+  #finally set last list [1::2] equal to the patty list
   last[1::2] = patty
+
+  #return the 'last' list
   return last
 
+#Print the modified list
 print(two(x))
